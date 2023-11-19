@@ -1,0 +1,86 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('background.jpg')  center no-repeat;
+    background-size: 100% 100%; 
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+    }
+    .game-container {
+    text-align: center;
+    }
+    h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white; 
+    margin-bottom: 20px;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 100px);
+        grid-gap: 10px;
+        margin: 0 auto;
+        }
+        .card {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        perspective: 1000px;
+        cursor: pointer;
+        }
+        .card .front,
+        .card .back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        font-weight: bold;
+        }
+        .card .front {
+        background-color: #e76f51; /* Hot Pink */
+        }
+        .card .back {
+        background-color: #fff;
+        color: #e76f51; /* Hot Pink */
+        transform: rotateY(180deg);
+        }
+        .card.flipped .front {
+        transform: rotateY(180deg);
+        }
+        .card.flipped .back {
+        transform: rotateY(360deg);
+    }
+    .restart {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #e76f51; /* Hot Pink */
+    color: #fff;
+    cursor: pointer;
+    }
+    .restart:hover {
+    background-color: #e76f51; /* Deep Pink */
+    }
+    .start {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 1em;
+        border: none;
+        border-radius: 5px;
+        background-color: #e76f51; /* Hot Pink */
+        color: #fff;
+        cursor: pointer;
+        }
+        .start:hover {
+        background-color: #e76f51; /* Deep Pink */
+        }
